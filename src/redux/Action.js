@@ -15,8 +15,6 @@ export function removeNote(item) {
 }
 
 export function updateNote(item) {
- 
-    
     return {
         type: UPDATE_NOTE,
         data:  item

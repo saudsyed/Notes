@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { View, Text, StyleSheet, TextInput, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet, TextInput, TouchableOpacity, Platform } from "react-native";
 import { useDispatch } from "react-redux";
 import { addNote, removeNote, updateNote } from "../redux/Action";
 
@@ -86,6 +86,7 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#FFFFFF',
         padding: 16,
+        marginBottom: Platform.OS === 'ios' ? 10 : 0,
         flexDirection: 'column',
     },
 
@@ -121,7 +122,7 @@ const styles = StyleSheet.create({
         fontSize: 16,
         fontWeight: '500',
         textAlign: 'center',
-        padding: 10,
+        padding: 12,
     },
 
     headerButtonText: {
